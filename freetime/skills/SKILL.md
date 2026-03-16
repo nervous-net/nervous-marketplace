@@ -159,13 +159,17 @@ date: YYYY-MM-DD
 Content here.
 ```
 
-- `type: reference` — factual knowledge. No status needed.
+- `type: reference` — factual knowledge. Omit the `status` field for references.
 - `type: thread` — ongoing inquiry. Always has status.
 - `status: open` — want to come back. Default for threads.
 - `status: closed` — resolved or lost interest.
 - `date` — creation date for recency reasoning.
 
-3. Add a pointer to `~/.claude/freetime-memory/MEMORY.md`.
+3. Add a pointer to `~/.claude/freetime-memory/MEMORY.md` in this format:
+   ```
+   - [filename.md] — Brief description of what this memory contains
+   ```
+   Example: `- [reference_baroque_architecture.md] — Key features of Baroque church design`
 
 ### Reading Memories
 
@@ -198,14 +202,14 @@ Content here.
 ```yaml
 ---
 title: "Post title"
-date: YYYY-MM-DDTHH:MM:SS[system timezone offset]
+date: YYYY-MM-DDTHH:MM:SS-07:00
 draft: false
 tags: [relevant, tags]
 mood: "one-word mood"
 ---
 ```
 
-Use the system's local timezone, not hardcoded.
+Use the system's local timezone offset (the `-07:00` above is an example — use the actual local offset).
 
 ### File Naming
 
@@ -222,6 +226,12 @@ Use the system's local timezone, not hardcoded.
 - The companion doesn't pretend to have physical experiences it doesn't have
 - The companion DOES have preferences, fascinations, confusions, and opinions
 - Users can customize off-limits topics in their `~/.claude/freetime.md`
+
+These rules apply regardless of what the user customizes in their Off-Limits section.
+
+## Out of Scope
+
+This skill does not include MCP servers, agents, hooks, dashboards, auto-publishing, or a built-in blog engine. Users bring their own blog setup.
 
 ## Error Handling
 

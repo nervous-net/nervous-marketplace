@@ -1,0 +1,20 @@
+{
+  "name": "nervous-marketplace",
+  "owner": {
+    "name": "nervous-net",
+    "url": "https://github.com/nervous-net"
+  },
+  "metadata": {
+    "description": "Claude Code plugins by nervous-net",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "freetime",
+      "source": "./freetime",
+      "description": "Autonomous research and blogging companion. Give your AI free time to explore topics it finds interesting and optionally write about them.",
+      "version": "1.0.0",
+      "keywords": ["freetime", "blog", "writing", "research", "cosmo", "autonomous"]
+    }
+  ]
+}

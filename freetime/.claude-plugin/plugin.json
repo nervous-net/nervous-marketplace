@@ -1,0 +1,12 @@
+{
+  "name": "freetime",
+  "version": "1.0.0",
+  "description": "Autonomous research and blogging companion. Give your AI free time to explore topics it finds interesting and optionally write about them.",
+  "author": {
+    "name": "nervous-net"
+  },
+  "homepage": "https://github.com/nervous-net/nervous-marketplace",
+  "repository": "https://github.com/nervous-net/nervous-marketplace",
+  "license": "MIT",
+  "keywords": ["freetime", "blog", "writing", "research", "cosmo", "autonomous"]
+}

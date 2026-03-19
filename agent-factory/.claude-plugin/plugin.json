@@ -1,12 +1,12 @@
 {
   "name": "agent-factory",
   "version": "1.0.0",
-  "description": "Create teams of persistent, personality-driven sub-agents for any project. Describe what you need help with and the factory designs, scaffolds, and deploys your agent team.",
+  "description": "Create teams of persistent, personality-driven sub-agents for any project. Describe what you need help with and the factory designs, scaffolds, and deploys your agent team. Hire agents from other projects to skip the onboarding interview.",
   "author": {
     "name": "nervous-net"
   },
   "homepage": "https://github.com/nervous-net/nervous-marketplace",
   "repository": "https://github.com/nervous-net/nervous-marketplace",
   "license": "MIT",
-  "keywords": ["agents", "subagents", "factory", "team", "mcp", "automation", "workflow"]
+  "keywords": ["agents", "subagents", "factory", "team", "mcp", "automation", "workflow", "hire", "cross-project"]
 }

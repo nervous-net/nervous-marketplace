@@ -276,6 +276,17 @@ After all files are generated, present a summary:
 📝 `.claude/CLAUDE.md` — updated with agent discovery block
 📝 `.claude/settings.local.json` — updated with agent permissions"
 
+### Registry Update
+
+After scaffolding, update the central agent registry so other projects can discover these agents via `/hire-agent`.
+
+1. Read the registry helpers at `<skill-base-dir>/registry-helpers.md` for schema and write instructions.
+2. Read the registry at `~/.claude/agents/registry.json` (create with empty structure if missing).
+3. For each agent in the team, generate keywords from their role and character sheet expertise section (4-8 lowercase terms).
+4. Find or create a project entry for the current project path.
+5. Set the project entry's `name` from the project name detected in Phase 1, `registered` to today's date, and `agents` to the full list of agents with slug, role, archetype, and keywords.
+6. Write the registry back to `~/.claude/agents/registry.json`.
+
 ## Phase 5: Test Drive (Optional)
 
 Ask: "Would you like to test drive your agents now? I'll give each one a small task so you can see them in action and tune anything that feels off. (You can always do this later.)"

@@ -134,9 +134,11 @@ List all agents from the team manifest:
 
 8. Regenerate the CLAUDE.md discovery block.
 
-9. Update the agent's `dispatch.md` at the new global location — update all paths to use the global location.
+9. **Update registry** — Read `<skill-base-dir>/registry-helpers.md` for instructions. Read the registry at `~/.claude/agents/registry.json`. Generate keywords for the agent (4-8 lowercase terms from role and expertise). Move the agent from the source project's `agents` array to the `global_agents` array with its global path. Write the registry back.
 
-10. Tell the user:
+10. Update the agent's `dispatch.md` at the new global location — update all paths to use the global location.
+
+11. Tell the user:
     "**[agent name]** is now global at `~/.claude/agents/[agent-slug]/`.
 
     To use them in another project, add this to that project's `agents/team.json`:

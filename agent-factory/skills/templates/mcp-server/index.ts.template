@@ -1,0 +1,29 @@
+// ABOUTME: MCP server for {{agent_name}} agent
+// ABOUTME: Provides external tool access for {{agent_description}}
+
+import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
+
+const server = new McpServer({
+  name: "{{agent_slug}}",
+  version: "1.0.0",
+});
+
+// TODO: Add tools for {{agent_name}}
+// Example:
+// server.tool(
+//   "tool_name",
+//   "Description of what this tool does",
+//   { param: z.string().describe("Parameter description") },
+//   async ({ param }) => {
+//     return { content: [{ type: "text", text: `Result: ${param}` }] };
+//   }
+// );
+
+async function main() {
+  const transport = new StdioServerTransport();
+  await server.connect(transport);
+}
+
+main().catch(console.error);

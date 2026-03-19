@@ -15,6 +15,13 @@
       "description": "Autonomous research and blogging companion. Give your AI free time to explore topics it finds interesting and optionally write about them.",
       "version": "1.0.0",
       "keywords": ["freetime", "blog", "writing", "research", "cosmo", "autonomous"]
+    },
+    {
+      "name": "agent-factory",
+      "source": "./agent-factory",
+      "description": "Create teams of persistent, personality-driven sub-agents for any project.",
+      "version": "1.0.0",
+      "keywords": ["agents", "subagents", "factory", "team", "mcp", "automation", "workflow"]
     }
   ]
 }

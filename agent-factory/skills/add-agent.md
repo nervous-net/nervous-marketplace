@@ -58,7 +58,7 @@ Generate files for the new agent only:
 2. Write character sheet, prompt, dispatch doc, contract (using templates at `<skill-base-dir>/templates/`)
 3. Create `memory/MEMORY.md` with empty index
 4. Copy selected reference docs
-5. **Update** `agents/team.json` — add the new agent entry to the `agents` array. Do NOT overwrite the file — read, parse, add entry, write back.
+5. **Update** `agents/team.json` — add the new agent entry to the `agents` array (include `"source": "created"` in the entry). Do NOT overwrite the file — read, parse, add entry, write back.
 6. Regenerate the CLAUDE.md discovery block between `<!-- agent-factory:start -->` and `<!-- agent-factory:end -->` markers with all agents listed
 7. **Update registry** — Read `<skill-base-dir>/registry-helpers.md` for instructions. Read the registry at `~/.claude/agents/registry.json`. Generate keywords for the new agent (4-8 lowercase terms from role and expertise). Find the project entry by path (or create one). Append the new agent to the project's `agents` array. Write the registry back.
 

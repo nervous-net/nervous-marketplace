@@ -219,6 +219,7 @@ Write `agents/team.json`:
       "name": "[agent-slug]",
       "role": "[one-sentence role description]",
       "scope": "project-local",
+      "source": "created",
       "pipeline_position": null,
       "dependencies": []
     }

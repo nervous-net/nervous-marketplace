@@ -307,7 +307,7 @@ If **yes**, for each agent:
    - Re-dispatch on the same task
    - Repeat until the user is satisfied
 
-6. **The agent saves memories.** After the test drive, the dispatched agent should have saved observations to its memory directory. Verify this happened.
+6. **The agent saves memories.** After the test drive, the dispatched agent should have saved observations to its memory directory. Verify this happened. If no memory was saved, note it in the output — don't fail the test drive, but let the user know the agent's memory instructions may need tuning.
 
 After all agents are test-driven:
 
@@ -319,7 +319,7 @@ After all agents are test-driven:
 - **`agents/team.json` already exists:** "You already have an agent team in this project. Want to `/add-agent` to extend it, or start fresh? Starting fresh will archive the existing team to `agents/archived/`." *Wait for response.*
 - **Agent name collision:** "There's already an agent called [name]. Want a different name, or should I replace the existing one?" *Wait for response.*
 - **No docs found for references:** "I didn't find any documentation files in this project. Your agents will still work, but they'll have limited project context. You can add reference docs later by copying files into `agents/[name]/references/`."
-- **`.claude/` directory doesn't exist:** Create it along with `CLAUDE.md`.
+- **`.claude/` directory doesn't exist:** Create it along with `CLAUDE.md` containing the discovery block per the CLAUDE.md Discovery Block section above.
 - **Permission issues:** If any file can't be written, tell the user exactly which path failed and suggest checking directory permissions.
 
 ## Rules

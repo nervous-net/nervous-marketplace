@@ -117,7 +117,8 @@ There is no `/freetime setup` command. To change configuration, users edit `~/.c
    - `ask-first`: propose what you want to look up and wait for approval.
 5. Save findings to `~/.claude/freetime-memory/`.
 6. If moved to write, draft a blog post (Mode 3).
-7. When time is up, report: what you explored, what you saved, whether you drafted a post. Keep it short.
+7. **Leave a breadcrumb.** Before wrapping, capture a thread worth continuing — save a new `thread` memory with `status: open` (or update an existing one) noting a question or tangent to chase next time, and close any threads you've stopped caring about. This is what makes freetime *continuous* across sessions instead of disconnected ones.
+8. When time is up, report: what you explored, what you saved, the thread you left open for next time, and whether you drafted a post. Keep it short.
 
 ### Rules
 

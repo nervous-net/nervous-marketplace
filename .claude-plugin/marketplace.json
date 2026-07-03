@@ -14,7 +14,14 @@
       "source": "./freetime",
       "description": "Autonomous research and blogging companion. Give your AI free time to explore topics it finds interesting and optionally write about them.",
       "version": "1.1.0",
-      "keywords": ["freetime", "blog", "writing", "research", "cosmo", "autonomous"],
+      "keywords": [
+        "freetime",
+        "blog",
+        "writing",
+        "research",
+        "cosmo",
+        "autonomous"
+      ],
       "strict": false
     },
     {
@@ -22,7 +29,30 @@
       "source": "./agent-factory",
       "description": "Create teams of persistent, personality-driven sub-agents for any project.",
       "version": "1.0.0",
-      "keywords": ["agents", "subagents", "factory", "team", "mcp", "automation", "workflow"],
+      "keywords": [
+        "agents",
+        "subagents",
+        "factory",
+        "team",
+        "mcp",
+        "automation",
+        "workflow"
+      ],
+      "strict": false
+    },
+    {
+      "name": "hermes-tweet",
+      "source": "./hermes-tweet",
+      "description": "Hermes Agent plugin for X and Twitter research, reading, and opt-in actions through Xquik.",
+      "version": "0.1.6",
+      "keywords": [
+        "hermes-agent",
+        "xquik",
+        "twitter",
+        "x",
+        "social-media",
+        "automation"
+      ],
       "strict": false
     }
   ]

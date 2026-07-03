@@ -17,9 +17,10 @@ A curated collection of Claude Code plugins by [nervous-net](https://github.com/
 ```
 /plugin install freetime@nervous-marketplace
 /plugin install agent-factory@nervous-marketplace
+/plugin install hermes-tweet@nervous-marketplace
 ```
 
-That's it. The skills (`/freetime`, `/create-agents`, `/add-agent`, `/upgrade-agent`, `/hire-agent`) are available immediately.
+That's it. The skills and toolsets (`/freetime`, `/create-agents`, `/add-agent`, `/upgrade-agent`, `/hire-agent`, `hermes-tweet`) are available immediately.
 
 ### Manual Install (Fallback)
 
@@ -39,6 +40,10 @@ If the marketplace install doesn't work (network issues, auth problems, etc.), y
    # For agent-factory:
    mkdir -p ~/.claude/plugins/cache/nervous-marketplace/agent-factory/1.0.0
    cp -r nervous-marketplace/agent-factory/* ~/.claude/plugins/cache/nervous-marketplace/agent-factory/1.0.0/
+
+   # For hermes-tweet:
+   mkdir -p ~/.claude/plugins/cache/nervous-marketplace/hermes-tweet/0.1.6
+   cp -r nervous-marketplace/hermes-tweet/* ~/.claude/plugins/cache/nervous-marketplace/hermes-tweet/0.1.6/
    ```
 
 3. Register the plugins by adding entries to `~/.claude/plugins/installed_plugins.json`:
@@ -52,20 +57,38 @@ If the marketplace install doesn't work (network issues, auth problems, etc.), y
          "installedAt": "<current-iso-date>"
        }
      ],
-     "agent-factory@nervous-marketplace": [
-       {
-         "scope": "user",
-         "installPath": "<your-home>/.claude/plugins/cache/nervous-marketplace/agent-factory/1.0.0",
-         "version": "1.0.0",
-         "installedAt": "<current-iso-date>"
-       }
-     ]
-   }
-   ```
+    "agent-factory@nervous-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "<your-home>/.claude/plugins/cache/nervous-marketplace/agent-factory/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "<current-iso-date>"
+      }
+    ],
+    "hermes-tweet@nervous-marketplace": [
+      {
+        "scope": "user",
+        "installPath": "<your-home>/.claude/plugins/cache/nervous-marketplace/hermes-tweet/0.1.6",
+        "version": "0.1.6",
+        "installedAt": "<current-iso-date>"
+      }
+    ]
+  }
+  ```
 
 4. Restart Claude Code. The skills should now appear.
 
 ## Plugins
+
+### Hermes Tweet
+
+> Native Hermes Agent plugin for X/Twitter research, reads, and approval-gated actions through Xquik.
+
+**Toolset:** `hermes-tweet`
+
+Use `tweet_explore` to inspect available endpoints, `tweet_read` with `XQUIK_API_KEY` for read calls, and keep actions disabled unless you intentionally enable account-changing operations.
+
+---
 
 ### Freetime
 
@@ -170,6 +193,12 @@ nervous-marketplace/
 │   ├── README.md
 │   └── skills/
 │       └── SKILL.md            # /freetime
+├── hermes-tweet/
+│   ├── .claude-plugin/
+│   │   └── plugin.json
+│   ├── README.md
+│   └── skills/
+│       └── hermes-tweet/       # Hermes Tweet skill
 └── docs/
     └── superpowers/
         ├── specs/              # Design specifications
